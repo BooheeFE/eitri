@@ -1,1 +1,1 @@
-# react-cli
+# booheefe-cli
