@@ -1,6 +1,11 @@
 <p align="center">
 	<img width="140" src="https://up.boohee.cn/house/u/fe/logo/eitri.png" alt="eitri_logo">
 </p>
+<p align="center">
+	[![npm](https://img.shields.io/npm/v/eitri.svg)](https://www.npmjs.com/package/eitri)
+	[![npm](https://img.shields.io/npm/dt/eitri.svg)](https://www.npmjs.com/package/eitri)
+	[![npm](https://img.shields.io/npm/l/eitri.svg)](https://www.npmjs.com/package/eitri)
+</p>
 
 # Eitri
 A simple CLI for creating your projects
