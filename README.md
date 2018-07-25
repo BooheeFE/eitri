@@ -1,5 +1,5 @@
 <p align="center">
-	<img width="140" src="https://up.boohee.cn/house/u/fe/eitri_logo.png" alt="eitri_logo">
+	<img width="140" src="https://up.boohee.cn/house/u/fe/logo/eitri.png" alt="eitri_logo">
 </p>
 
 # Eitri
