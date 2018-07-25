@@ -8,7 +8,7 @@
 	<a href="https://www.npmjs.com/package/eitri">
 		<img src="https://img.shields.io/npm/dt/eitri.svg" alt="">
 	</a>
-	<a href="https://opensource.org/licenses/MIT">
+	<a href="LICENSE">
 		<img src="https://img.shields.io/npm/l/eitri.svg" alt="">
 	</a>
 </p>
