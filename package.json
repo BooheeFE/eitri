@@ -1,13 +1,13 @@
 {
-  "name": "booheefe-cli",
+  "name": "eitri",
   "version": "1.0.0",
   "description": "A simple CLI for creating your projects",
   "bin": {
-    "booheefe-cli": "bin/index.js"
+    "eitri": "bin/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BooheeFE/booheefe-cli.git"
+    "url": "git+https://github.com/BooheeFE/Eitri.git"
   },
   "keywords": [
     "cli",
@@ -16,9 +16,9 @@
   "author": "simbawu <connect@simbawu.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/BooheeFE/booheefe-cli/issues"
+    "url": "https://github.com/BooheeFE/Eitri/issues"
   },
-  "homepage": "https://github.com/BooheeFE/booheefe-cli#readme",
+  "homepage": "https://github.com/BooheeFE/Eitri#readme",
   "dependencies": {
     "chalk": "^2.4.1",
     "cli-table": "^0.3.1",
