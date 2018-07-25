@@ -2,9 +2,15 @@
 	<img width="140" src="https://up.boohee.cn/house/u/fe/logo/eitri.png" alt="eitri_logo">
 </p>
 <p align="center">
-	[![npm](https://img.shields.io/npm/v/eitri.svg)](https://www.npmjs.com/package/eitri)
-	[![npm](https://img.shields.io/npm/dt/eitri.svg)](https://www.npmjs.com/package/eitri)
-	[![npm](https://img.shields.io/npm/l/eitri.svg)](https://www.npmjs.com/package/eitri)
+	<a href="https://www.npmjs.com/package/eitri">
+		<img src="https://img.shields.io/npm/v/eitri.svg" alt="">
+	</a>
+	<a href="https://www.npmjs.com/package/eitri">
+		<img src="https://img.shields.io/npm/dt/eitri.svg" alt="">
+	</a>
+	<a href="https://www.npmjs.com/package/eitri">
+		<img src="https://img.shields.io/npm/l/eitri.svg" alt="">
+	</a>
 </p>
 
 # Eitri
