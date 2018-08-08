@@ -108,5 +108,5 @@ You can create your own templates repository, and push your templates in differe
 
 ## License
 
-[**The MIT License**](http://opensource.org/licenses/MIT).
+[**The MIT License**](LICENSE).
 
