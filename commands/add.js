@@ -9,7 +9,7 @@ const question = [
     type: 'input',
     name: 'name',
     message: 'Set the custom name of the template:',
-    validate (val) {
+    validate(val) {
       if (tplList[val]) {
         return 'Template is existed!'
       } else if (val === '') {
@@ -23,7 +23,7 @@ const question = [
     type: 'input',
     name: 'place',
     message: 'Owner/name of the template:',
-    validate (val) {
+    validate(val) {
       if (val !== '') {
         return true
       }
@@ -34,7 +34,7 @@ const question = [
     type: 'input',
     name: 'branch',
     message: 'Branch of the template:',
-    default: 'master'
+    default: 'main'
   }
 ]
 

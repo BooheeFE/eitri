@@ -1,6 +1,6 @@
 {
   "name": "eitri",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A simple CLI for creating your projects",
   "bin": {
     "eitri": "bin/index.js"
@@ -11,7 +11,9 @@
   },
   "keywords": [
     "cli",
-    "boohee"
+    "boohee",
+    "react",
+    "vue"
   ],
   "author": "simbawu <connect@simbawu.com>",
   "license": "MIT",
@@ -20,13 +22,13 @@
   },
   "homepage": "https://github.com/BooheeFE/Eitri#readme",
   "dependencies": {
-    "chalk": "^2.4.1",
+    "chalk": "^4.0.0",
     "cli-table": "^0.3.1",
-    "commander": "^2.16.0",
-    "download-git-repo": "^1.0.2",
+    "commander": "^8.3.0",
+    "download-git-repo": "^3.0.2",
     "handlebars": "^4.0.11",
-    "inquirer": "^6.0.0",
+    "inquirer": "^8.0.0",
     "metalsmith": "^2.3.0",
-    "ora": "^1.2.0"
+    "ora": "^5.0.0"
   }
 }

@@ -1,6 +1,1 @@
-{
-	"react": {
-		"owner/name": "BooheeFE/react-template",
-		"branch": "master"
-	}
-}
+{"react":{"owner/name":"BooheeFE/react-template","branch":"master"},"react-ts":{"owner/name":"BooheeFE/react-template-ts","branch":"main"},"vue-ts":{"owner/name":"BooheeFE/vue-template-ts","branch":"main"}}

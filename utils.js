@@ -1,14 +1,15 @@
 const Table = require('cli-table')
 const chalk = require('chalk')
 
-const table = new Table({
-  head: ['Template Name', 'Owner/Name', 'Branch'],
-  style: {
-    head: ['green']
-  }
-})
 
-function listTable (tplList, lyric) {
+
+function listTable(tplList, lyric) {
+  const table = new Table({
+    head: ['Template Name', 'Owner/Name', 'Branch'],
+    style: {
+      head: ['green']
+    }
+  })
   const list = Object.keys(tplList)
   if (list.length) {
     list.forEach((key) => {
@@ -22,7 +23,6 @@ function listTable (tplList, lyric) {
       }
     })
   } else {
-    console.log(table.toString())
     if (lyric) {
       console.log(chalk.green(`\u2714 ${lyric}`))
     }
@@ -30,4 +30,16 @@ function listTable (tplList, lyric) {
   }
 }
 
+function templates(list) {
+  const arr = []
+  for (const key in list) {
+    const str = `${key} (${list[key]['owner/name']}  ${list[key].branch}) `
+    arr.push({
+      name: str,
+      value: key
+    })
+  }
+  return arr
+}
+exports.templates = templates
 exports.listTable = listTable

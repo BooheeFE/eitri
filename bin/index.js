@@ -9,7 +9,7 @@ const res = command => resolve(__dirname, '../commands/', command)
 const program = require('commander')
 
 program
-  .version(require('../package').version )
+  .version(require('../package').version)
 
 program
   .usage('<command>')
@@ -47,6 +47,13 @@ program
   })
 
 program
+  .command('rename')
+  .description('Rename a template')
+  .alias('r')
+  .action(() => {
+    require(res('rename'))
+  })
+program
   .command('map')
   .description('Place files to diffirent position')
   .alias('m')
@@ -56,6 +63,6 @@ program
 
 program.parse(process.argv)
 
-if(!program.args.length){
+if (!program.args.length) {
   program.help()
 }

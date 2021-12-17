@@ -1,33 +1,34 @@
-const { prompt } = require('inquirer')
+const inquirer = require('inquirer')
+const chalk = require('chalk')
 const { writeFile } = require('fs')
-const { listTable } = require(`${__dirname}/../utils`)
+
+const { listTable, templates } = require(`${__dirname}/../utils`)
 
 let tplList = require(`${__dirname}/../templates`)
 
-const question = [
-  {
-    type: 'input',
-    name: 'name',
-    message: 'Which template you want to delete:',
-    validate (val) {
-      if (tplList[val]) {
-        return true
-      } else if (val === '') {
-        return 'Name is required!'
-      } else if (!tplList[val]) {
-        return 'This template doesn\'t exists.'
-      }
-    }
+function removeTmplate(value) {
+  delete tplList[value]
+  return JSON.stringify(tplList)
+}
+async function deleteTmplate() {
+  if (Object.keys(tplList).length === 0) {
+    return console.log(chalk.cyan('没有仓库可供删除'))
   }
-]
-
-module.exports = prompt(question).then(({ name }) => {
-  delete tplList[name]
-
-  writeFile(`${__dirname}/../templates.json`, JSON.stringify(tplList), 'utf-8', (err) => {
+  const list = templates(tplList)
+  const { action } = await inquirer.prompt([
+    {
+      name: 'action',
+      type: 'list',
+      message: 'Select the repo to delete',
+      choices: list
+    }
+  ])
+  const removeJson = removeTmplate(action)
+  writeFile(`${__dirname}/../templates.json`, removeJson, 'utf-8', (err) => {
     if (err) {
       console.log(err)
     }
-    listTable(tplList, 'Template has been deleted successfully!')
+    listTable(tplList, 'Repo has been deleted successfully!')
   })
-})
+}
+module.exports = deleteTmplate()

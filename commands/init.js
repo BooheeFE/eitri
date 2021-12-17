@@ -1,8 +1,6 @@
 const { prompt } = require('inquirer')
-const { writeFile } = require('fs')
-const { listTable } = require(`${__dirname}/../utils`)
-const { resolve } = require('path')
 const chalk = require('chalk')
+const { templates } = require(`${__dirname}/../utils`)
 const download = require('download-git-repo')
 const ora = require('ora')
 
@@ -10,28 +8,20 @@ let tplList = require(`${__dirname}/../templates`)
 
 const question = [
   {
-    type: 'input',
     name: 'name',
-    message: 'Template name:',
-    validate (val) {
-      if (tplList[val]) {
-        return true
-      } else if (val === '') {
-        return 'Name is required!'
-      } else if (!tplList[val]) {
-        return 'This template doesn\'t exists.'
-      }
-    }
+    type: 'list',
+    message: 'Select the template name',
+    choices: templates(tplList)
   },
   {
     type: 'input',
     name: 'project',
     message: 'Project name:',
-    validate (val) {
+    validate(val) {
       if (val !== '') {
         return true
       }
-      return 'Project name is required!'
+      return 'Template name is required!'
     }
   },
   {
@@ -48,7 +38,7 @@ module.exports = prompt(question).then(({ name, project, place }) => {
   const spinner = ora('Downloading template...')
 
   spinner.start()
-
+  console.log(`${place}/${project}`)
   download(`${gitPlace}#${gitBranch}`, `${place}/${project}`, (err) => {
     if (err) {
       console.log(chalk.red(err))
