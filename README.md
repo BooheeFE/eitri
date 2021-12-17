@@ -14,6 +14,7 @@
 </p>
 
 # Eitri
+
 A simple CLI for creating your projects
 
 ## Getting Started
@@ -23,6 +24,7 @@ A simple CLI for creating your projects
 ```shell
 yarn add eitri -g
 ```
+
 ### Usage
 
 ```
@@ -35,6 +37,7 @@ yarn add eitri -g
     list|l     List all the templates
     init|i     Generate a new project
     delete|d   Delete a template
+    rename|r   Rename a template
 
   Options:
 
@@ -43,8 +46,11 @@ yarn add eitri -g
 ```
 
 ### Commands
+
 #### add | a
+
 This command would help you to add a new template to the `templates.json`, which will be used by `Eitri` to generate projects.
+
 ```
 $ eitri add
 
@@ -58,10 +64,13 @@ $ eitri add
 └───────────────┴─────────────────────────┴────────┘
 ✔ New template has been added successfully!
 ```
+
 `Eitri` use [download-git-repo](https://github.com/flipxfx/download-git-repo) to down load git repos. After answering 3 questions, you'll add a new template to `Eitri`.
 
 ### list | l
+
 It shows you the templates list.
+
 ```
 $ eitri list
 
@@ -75,7 +84,9 @@ $ eitri list
 ```
 
 ### init | i
+
 After adding new templates, you could use this command to generate your own project by choosing template.
+
 ```
 $ eitri init
 
@@ -88,7 +99,9 @@ New project has been initialized successfully!
 ```
 
 ### delete | d
+
 To delete a template, you could use this command:
+
 ```
 $ eitri delete
 
@@ -100,7 +113,25 @@ $ eitri delete
 └───────────────┴─────────────────────────┴────────┘
 ✔ Template has been deleted successfully
 ```
+
+### rename | r
+
+To rename a template, you could use this command:
+
+```
+$ eitri rename
+
+? Which template you want to rename? vue to vue-ts
+┌───────────────┬─────────────────────────┬────────┐
+│ Template Name │ Owner/Name              │ Branch │
+├───────────────┼─────────────────────────┼────────┤
+│ vue-ts        │ BooheeFE/react-template │ main   │
+└───────────────┴─────────────────────────┴────────┘
+✔ Template has been deleted successfully
+```
+
 ## Template
+
 The most important part of Eitri is `template`. All templates' infomation were list in the `templates.json`.
 A template means a project sample, which has a simple or complex file structure.
 
@@ -109,4 +140,3 @@ You can create your own templates repository, and push your templates in differe
 ## License
 
 [**The MIT License**](LICENSE).
-
